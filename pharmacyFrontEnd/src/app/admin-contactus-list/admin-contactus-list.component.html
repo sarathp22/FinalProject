@@ -1,0 +1,49 @@
+<!-- <p>admin-contactus-list works!</p> -->
+
+<div class="bg-light py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mb-0">
+          <a href="adminpage">Admin</a> 
+         | <a class="ml-2" href="adminorderlist">Order List</a> 
+         | <a class="ml-2" href="adminorderdisplay">Dispatched List</a> 
+         | <a class="ml-2" href="admincontactuslist">Contact Us Message List</a>
+         <a class="mr-2 float-right" href="adminlogin"  (click)="adminLogout()">Logout</a>
+          
+         
+         <!-- <span class="mx-2 mb-0">/</span>
+          <strong class="text-black">Contact</strong> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- link ends   -->
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class="product-name">Name</th>
+        <th class="product-name">Email</th>
+        <th class="product-price">Subject</th>
+        <th class="product-quantity">Message</th>
+       
+      </tr>
+    </thead>
+
+
+
+    <tbody>
+      <tr *ngFor="let item of contactusData;let index = index;">
+          
+        <td>{{item?.fname}}&nbsp;{{item?.lname}}</td>
+        <td>{{item?.email}}</td>
+        <td>{{item?.subject}}</td>
+        <td>{{item?.message}}</td>
+       
+
+      </tr>
+
+
+    </tbody>
+  </table>

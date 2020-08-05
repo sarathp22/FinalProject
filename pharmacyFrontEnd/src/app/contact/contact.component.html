@@ -1,0 +1,118 @@
+<!-- <p>contact works!</p> -->
+
+<!-- link starts -->
+
+<div class="bg-light py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mb-0">
+          <a href="index.html">Home</a> <span class="mx-2 mb-0">/</span>
+          <strong class="text-black">Contact</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- link ends   -->
+
+  <!-- contact form begins -->
+
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="h3 mb-5 text-black">Get In Touch</h2>
+        </div>
+        <div class="col-md-12">
+  
+          <form  method="post" #contactus="ngForm" (ngSubmit)="send()">
+  
+            <div class="p-3 p-lg-5 border">
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <label for="c_fname" class="text-black">First Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="c_fname"  #fname=ngModel [class.is-invalid]="fname.invalid && fname.touched" name="fname" pattern="^[a-zA-Z]+$"  required [(ngModel)]="contact.fname">
+                  <small class="text-danger" [class.d-none]="fname.valid || fname.untouched">Characters Only </small>
+
+                </div>
+                <div class="col-md-6">
+                  <label for="c_lname" class="text-black">Last Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="c_lname" #lname=ngModel [class.is-invalid]="lname.invalid && lname.touched" name="lname" pattern="^[a-zA-Z]+$"  required [(ngModel)]="contact.lname">
+                  <small class="text-danger" [class.d-none]="lname.valid || lname.untouched">Characters Only </small>
+
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <label for="c_email" class="text-black">Email <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control" id="c_email"  placeholder="" #email=ngModel [class.is-invalid]="email.invalid && email.touched" name="email" pattern="^[a-z0-9.%+.]+@[a-z0-9.-]+\.[a-z]{2,4}$" required [(ngModel)]="contact.email">
+                  <small class="text-danger" [class.d-none]="email.valid || email.untouched">Enter a valid email</small>
+
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <label for="c_subject" class="text-black">Subject </label>
+                  <input type="text" class="form-control" id="c_subject" name="c_subject" [(ngModel)]="contact.subject">
+                </div>
+              </div>
+  
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <label for="c_message" class="text-black">Message </label>
+                  <textarea  id="c_message" name="message" cols="30" rows="7" class="form-control" #message=ngModel [class.is-invalid]="message.invalid && message.touched" required [(ngModel)]="contact.message"></textarea>
+                  <small class="text-danger" [class.d-none]="message.valid || message.untouched">Enter your message</small>
+
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-lg-12">
+                  <input type="submit" class="btn btn-primary btn-lg btn-block"  value="Send Message" [disabled]="contactus.form.invalid">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- contact form ends here -->
+
+  <!-- contact,aboutus,navigation starts -->
+
+  <footer class="site-footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+
+          <div class="block-7">
+            <h3 class="footer-heading mb-4">About <strong class="text-primary">Us</strong></h3>
+            <p>Brothers Medicals has always been and has continued to be the best choice for all your pharmacy needs. To help our valued customers to avoid last minute hassles, we proudly introduce to you a new and innovative solution</p>
+          </div>
+
+        </div>
+        <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
+          <h3 class="footer-heading mb-4">Vision</h3>
+         <p> We firmly believe that it is our motto to touch as many as lives as possible by ensuring the availability of best healthcare and pharmaceutical products, reaching out of the needy hands and reduce the incidence of diseases.</p>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="block-5 mb-5">
+            <h3 class="footer-heading mb-4">Contact Info</h3>
+            <ul class="list-unstyled">
+              <li class="address">MA Road <br> Near Bata <br> 670001 <br> KANNUR</li>
+              <li class="phone"><a href="tel://23923929210">+919496831275</a></li>
+              <li class="email">sarathp22@gmail.com</li>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+     
+    </div>
+  </footer>
+
+<!-- contact,aboutus,navigation end -->

@@ -1,0 +1,176 @@
+<!-- link starts -->
+
+<div class="bg-light py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mb-0"><a href="">Home</a> <span class="mx-2 mb-0">/</span> <a
+            href="store">Store</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">{{medicine?.medicineName}}</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- link end -->
+
+  <!-- single product description starts -->
+
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 mr-auto">
+          <div class="border text-center">
+            <img src="{{medicine?.imgUrl}}" [style.width.px]='imageWidth' [style.height.px]='imageHeight' alt="Image" class="img-fluid p-5">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2 class="text-black">{{medicine?.medicineName}}</h2>
+          <p>{{medicine?.des}}</p>
+          
+
+          <p><strong class="text-primary h4">₹&nbsp;{{medicine?.price}}&nbsp;per&nbsp;{{medicine?.pricePerQuantity}}</strong></p>
+
+          
+          
+          <div class="mb-5">
+            <div class="input-group mb-3" style="max-width: 220px;">
+              <div class="input-group-prepend">
+                <!-- <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button> -->
+              </div>
+              <input type="number" class="form-control text-center" [(ngModel)]="val" 
+                aria-label="Example text with button addon" aria-describedby="button-addon1" >
+              <div class="input-group-append">
+                <!-- <button class="btn btn-outline-primary js-btn-plus" type="button">+</button> -->
+              </div>
+            </div>
+  
+          </div>
+          <p><a href="/cart" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary" [class.disabled]="val === 0 || val === null " (click)="cart()">Add To Cart</a></p>
+
+          <!-- <div class="mt-5">
+            <ul class="nav nav-pills mb-3 custom-pill" id="pills-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                  aria-controls="pills-home" aria-selected="true">Ordering Information</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                  aria-controls="pills-profile" aria-selected="false">Specifications</a>
+              </li>
+          
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <table class="table custom-table">
+                  <thead>
+                    <th>Material</th>
+                    <th>Description</th>
+                    <th>Packaging</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">OTC022401</th>
+                      <td>Pain Management: Acetaminophen PM Extra-Strength Caplets, 500 mg, 100/Bottle</td>
+                      <td>1 BT</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">OTC022401</th>
+                      <td>Pain Management: Acetaminophen PM Extra-Strength Caplets, 500 mg, 100/Bottle</td>
+                      <td>144/CS</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">OTC022401</th>
+                      <td>Pain Management: Acetaminophen PM Extra-Strength Caplets, 500 mg, 100/Bottle</td>
+                      <td>1 EA</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+          
+                <table class="table custom-table">
+          
+                  <tbody>
+                    <tr>
+                      <td>HPIS CODE</td>
+                      <td class="bg-light">999_200_40_0</td>
+                    </tr>
+                    <tr>
+                      <td>HEALTHCARE PROVIDERS ONLY</td>
+                      <td class="bg-light">No</td>
+                    </tr>
+                    <tr>
+                      <td>LATEX FREE</td>
+                      <td class="bg-light">Yes, No</td>
+                    </tr>
+                    <tr>
+                      <td>MEDICATION ROUTE</td>
+                      <td class="bg-light">Topical</td>
+                    </tr>
+                  </tbody>
+                </table>
+          
+              </div>
+          
+            </div>
+          </div> -->
+
+  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- single product description end -->
+
+  <!-- discount for signup person starts -->
+
+  <div class="site-section bg-image overlay" style="background-image: url('assets/images/hero_bg_2.jpg');">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+       <div class="col-lg-7">
+         <h3 class="text-white">Sign up for discount up to 10% OFF</h3>
+         <p class="text-white">signup here and become a valued customer</p>
+         <p class="mb-0"><a href="register" class="btn bg-white text-info">Sign up</a></p>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- discount for signup person end -->
+
+  <!-- aboutus starts -->
+
+  <footer class="site-footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+
+          <div class="block-7">
+            <h3 class="footer-heading mb-4">About <strong class="text-primary">Us</strong></h3>
+            <p>Brothers Medicals has always been and has continued to be the best choice for all your pharmacy needs. To help our valued customers to avoid last minute hassles, we proudly introduce to you a new and innovative solution</p>
+          </div>
+
+        </div>
+        <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
+          <h3 class="footer-heading mb-4">Vision</h3>
+         <p> We firmly believe that it is our motto to touch as many as lives as possible by ensuring the availability of best healthcare and pharmaceutical products, reaching out of the needy hands and reduce the incidence of diseases.</p>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="block-5 mb-5">
+            <h3 class="footer-heading mb-4">Contact Info</h3>
+            <ul class="list-unstyled">
+              <li class="address">MA Road <br> Near Bata <br> 670001 <br> KANNUR</li>
+              <li class="phone"><a href="tel://23923929210">+919496831275</a></li>
+              <li class="email">sarathp22@gmail.com</li>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+     
+    </div>
+  </footer>
+
+   <!-- aboutus end -->
